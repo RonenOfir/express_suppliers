@@ -1,0 +1,45 @@
+
+//server
+api.put('/items/update', function(request, response){
+	
+	var date = new Date();
+	
+	db.serialize(function() {
+		
+	var sql = 'UPDATE items SET name=?, cost_price=?, recommended=?, t_update=? WHRE id=?) VALUES (?, ?, ?, ?, ?) ',
+        query = sql + 'username=? and password=?' ,
+        params = [request.query.pname, request.query.pcost, request.query.precommended, date, request.query.pid ];
+		
+		db.put( query, params, function(err, row) {
+			
+			if(err){
+				console.log("Error update item:"+err);
+			}
+		 
+		});	 
+});
+
+///api
+
+ 
+		$scope.updateItem = function(){
+					
+		
+				
+				
+			
+	  $http({
+			url: '/items/update/', 
+			method: "put",
+			params: {pname: $scope.itemUpd.name, pcost: $scope.itemUpd.cost_price,
+						precommended: $scope.itemUpd.recommended}
+	  }).then(function(response){
+			
+			 console.log(response.data);
+		
+	  });
+		
+			
+	}
+		 
+		 

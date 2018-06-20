@@ -1,0 +1,19 @@
+
+$routeProvider
+------------------------
+https://docs.angularjs.org/api/ngRoute/service/$route#example
+
+Can Not GET /
+----------------------
+add '#!/' to the link.
+
+*אם עדכנת ולא מתעדכן בדפדפן, קח את כל הקבצים ותבצע install ל- express+sqlite3 מחדש
+בתיקייה.
+
+
+
+npm install
+-------------
+express
+sqlite3
+express-session

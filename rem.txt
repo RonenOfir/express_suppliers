@@ -1,0 +1,30 @@
+
+$routeProvider
+------------------------
+https://docs.angularjs.org/api/ngRoute/service/$route#example
+
+
+Can Not GET /
+----------------------
+add '#!/' to the link.
+
+
+nmp install 
+---------------
+express
+sqlite3
+express-session
+
+autoincrement
+---------------------
+id shuld be integer primary key + send null to the insert sql.
+
+
+'MM' 'dd' 'yyyy'
+'HH' 'mm'
+
+
+
+
+
+
